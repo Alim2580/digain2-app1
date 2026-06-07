@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Net VPN - Download Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --primary-color: #007bff;
+            --btn-hover: #0056b3;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #f4f4f4;
+            --card-bg: rgba(30, 30, 30, 0.9);
+            --primary-color: #bb86fc;
+            --btn-hover: #3700b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        /* Top Marquee */
+        .marquee-container {
+            width: 100%;
+            background: #ff4757;
+            color: white;
+            padding: 8px 0;
+            font-weight: 600;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--text-color);
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        /* App Info Card */
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .app-stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            background: #e0e0e0;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: block;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+        }
+        .download-btn:hover {
+            background: var(--btn-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Image Slider */
+        .slider-container {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: slide 9s infinite;
+        }
+        .slides img {
+            width: 33.33%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0%, 25% { transform: translateX(0); }
+            33%, 58% { transform: translateX(-33.33%); }
+            66%, 91% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Packages Section */
+        .packages {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .packages h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .sim-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        body.dark-mode .sim-card { border-color: #444; }
+        
+        .sim-title { font-weight: bold; margin-bottom: 5px; }
+        .stc { color: #4b2384; }
+        .mobily { color: #00adef; }
+        .zain { color: #88225d; }
+        body.dark-mode .stc { color: #9c5cff; }
+
+        /* Social Buttons */
+        .social-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .social-btn {
+            flex: 1;
+            margin: 0 5px;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .fb { background: #1877F2; }
+        .yt { background: #FF0000; }
+        .wa { background: #25D366; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="left">
+            স্বাগতম! আমাদের নতুন আপডেট ভার্সন চলে এসেছে। সেরা স্পিড পেতে আজই অ্যাপটি ডাউনলোড করুন। সৌদি আরবের সব সিমের প্যাকেজ নিচে দেওয়া হলো।
+        </marquee>
+    </div>
+
+    <i class="fas fa-moon theme-toggle" id="themeIcon" onclick="toggleTheme()"></i>
+
+    <div class="container">
+        <div class="app-card">
+            <img src="https://via.placeholder.com/100" alt="App Logo" class="app-logo">
+            <h2>Classic Net VPN</h2>
+            
+            <div class="app-stats">
+                <span><i class="fas fa-star" style="color: gold;"></i> 4.8 Rating</span>
+                <span><i class="fas fa-download"></i> 100K+ Downloads</span>
+            </div>
+            
+            <button class="copy-btn" onclick="copyLink()">
+                <i class="fas fa-copy"></i> অ্যাপ লিংক কপি করুন
+            </button>
+
+            <a href="YOUR_APP_DOWNLOAD_LINK_HERE.apk" class="download-btn" download>
+                <i class="fas fa-cloud-download-alt"></i> Download Now
+            </a>
+        </div>
+
+        <div class="slider-container">
+            <div class="slides">
+                <img src="https://via.placeholder.com/500x180?text=Banner+1" alt="Banner 1">
+                <img src="https://via.placeholder.com/500x180?text=Banner+2" alt="Banner 2">
+                <img src="https://via.placeholder.com/500x180?text=Banner+3" alt="Banner 3">
+            </div>
+        </div>
+
+        <div class="packages">
+            <h3><i class="fas fa-box-open"></i> Saudi Arabia Packages</h3>
+            
+            <div class="sim-card">
+                <div class="sim-title stc"><i class="fas fa-sim-card"></i> STC (Jawwy)</div>
+                <p>Social Media Package 30 SAR / 30 Days. Dial *xxx# to activate.</p>
+            </div>
+            
+            <div class="sim-card">
+                <div class="sim-title mobily"><i class="fas fa-sim-card"></i> Mobily</div>
+                <p>Monthly Unlimited Data 60 SAR. Send SMS 'xxxx' to 1100.</p>
+            </div>
+            
+            <div class="sim-card">
+                <div class="sim-title zain"><i class="fas fa-sim-card"></i> Zain</div>
+                <p>Free Fire & TikTok Package 25 SAR. Dial *xxx#</p>
+            </div>
+        </div>
+
+        <div class="social-btns">
+            <a href="#" class="social-btn fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn wa"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer">
+            <p>Developed & Maintained by</p>
+            <strong>Shafiul Alam Shafiq</strong><br>
+            <small>Founder, Classic Telecom</small>
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Toggle Logic
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            let themeIcon = document.getElementById("themeIcon");
+            if(document.body.classList.contains("dark-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        }
+
+        // Copy App Link Logic
+        function copyLink() {
+            // Replace with your actual Github Page URL
+            const appUrl = window.location.href; 
+            navigator.clipboard.writeText(appUrl).then(() => {
+                alert("অ্যাপ লিংক কপি হয়েছে! (Link Copied)");
+            }).catch(err => {
+                alert("কপি করতে সমস্যা হয়েছে।");
+            });
+        }
+    </script>
+</body>
+</html>
